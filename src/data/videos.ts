@@ -62,12 +62,23 @@ export const videos: Video[] = [
   },
   {
     id: "6",
+    title: "Apresentação CSS",
+    description: "Apresentação CSS, diversos exemplos.",
+    duration: "12:21",
+    module: "Módulo 1 — Fundamentos",
+    order: 6,
+    videoUrl: "https://youtu.be/skOhf-SS-b4",
+    thumbnail: "",
+  },
+  {
+    id: "7",
     title: "Divs e Identificadores",
     description: "Apresentação sobre Div's, class e id. Link W3Schools: https://www.w3schools.com/html/html_intro.asp",
     duration: "6:59",
     module: "Módulo 1 — Fundamentos",
-    order: 6,
+    order: 7,
     videoUrl: "https://youtu.be/BJw_jl0QfsM",
     thumbnail: "",
   },
+  
 ];
