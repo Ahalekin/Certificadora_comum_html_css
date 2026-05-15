@@ -4,6 +4,7 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
+  base: "/Certificadora_comum_html_css",
   test: {
     environment: "jsdom",
     globals: true,
