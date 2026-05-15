@@ -21,7 +21,7 @@ const emitVersionJson = () => ({
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/video-course-hub/" : "/",
+  base: mode === "production" ? "/Certificadora_comun_html_css/" : "/",
   define: {
     __BUILD_ID__: JSON.stringify(BUILD_ID),
   },
