@@ -1,11 +1,9 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { componentTagger } from "lovable-tagger";
 
 const BUILD_ID = Date.now().toString();
 
-// Emite /version.json no build para detectar novas versões publicadas
 const emitVersionJson = () => ({
   name: "emit-version-json",
   apply: "build" as const,
@@ -19,9 +17,8 @@ const emitVersionJson = () => ({
   },
 });
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/Certificadora_comum_html_css/" : "/",
+  base: mode === "production" ? "/certificadora/" : "/",
   define: {
     __BUILD_ID__: JSON.stringify(BUILD_ID),
   },
@@ -34,9 +31,8 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    mode === "development" && componentTagger(),
     emitVersionJson(),
-  ].filter(Boolean),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
