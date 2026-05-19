@@ -18,7 +18,7 @@ const emitVersionJson = () => ({
 });
 
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/certificadora/" : "/",
+  base: mode === "production" ? "/Certificadora_comum_html_css/" : "/",
   define: {
     __BUILD_ID__: JSON.stringify(BUILD_ID),
   },
